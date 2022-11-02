@@ -1,0 +1,117 @@
+.main {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.widget {
+    width: 1100px;
+    position: absolute;
+    top: 53px;
+    /* border: 1px solid red; */
+}
+
+.main-content {
+    width: 1100px;
+    position: absolute;
+    top: 104px;
+    /* border: 1px solid red; */
+}
+
+.widget-right {
+    margin-left: 45px;
+}
+
+.widget-ticker {
+    width: 1100px;
+    height: 50px;
+    display: flex;
+    background-color: white;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* left */
+.widget-left, .widget-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.widget-left div {
+    margin-right: 12px;
+    font-size: 13px;
+
+}
+
+.widget-left div a {
+    text-decoration: none;
+}
+
+.widget-left .tag {
+    height: 24px;
+    line-height: 24px;
+    color: #000;
+    border-radius: 100px;
+    background-color: #f0f0f0;
+    padding: 0 8px 0 12px;
+}
+
+/* Right */
+.widget-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.widget-right .img-rain {
+    height: 30px;
+}
+
+.widget-right div {
+    margin-left: 12px;
+}
+
+.widget-right a {
+    text-decoration: none;
+}
+
+.content-zingHome {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 10px;
+    height: auto;
+}
+
+.content-zingHome .content-left {
+    width: 37%;
+}
+
+.item-left {
+    display: flex;
+    border-bottom: 1px solid #dedede;
+}
+
+.item-left .img-left {
+    margin: 10px 0 10px 0;
+}
+
+.item-left .title-left {
+    margin: 5px 0px 0 5px;
+}
+
+.content-mid .mid-mid {
+    margin-top: -35px !important;
+    /* display: block; */
+}
+
+.content-right .right-right {
+    display: block;
+    margin-top: 10px;
+}
+
+/* .title-left .title-mid .item-right{
+    font-family: Arial, Helvetica, sans-serif;
+} */

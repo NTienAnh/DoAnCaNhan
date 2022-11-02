@@ -1,0 +1,16 @@
+.ant-tabs-content-holder{
+    margin-left: -13px;
+}
+.ant-input-group-wrapper {
+    margin-left: -21px;
+}
+.ant-input-group-wrapper ant-input-search ant-input-search-with-button{
+    margin-left: 88px;
+}
+.ant-tabs-content-holder{
+    margin-top: -41px;
+}
+/* Tab 1 2 3 */
+.ant-tabs-nav-wrap{
+    margin-left: 2px;
+}
