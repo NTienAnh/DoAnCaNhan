@@ -1,23 +1,23 @@
-import { React, useEffect } from 'react'
+import { React, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import {Login} from '../../pages'
+import { Login } from "../../pages";
 
 const Logout = () => {
-    const navigate = useNavigate()
-    const user = localStorage.getItem('token');
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        if (user) {
-            window.localStorage.removeItem("token");
-            window.localStorage.removeItem("user");
-            navigate("/login");
-        }
-    }, [])
+  useEffect(() => {
+    const user = localStorage.getItem("user");
+    console.log(user);
+    if (user) {
+      window.localStorage.removeItem("user");
+      navigate("/login");
+    }
+  }, []);
 
-    return (
-        <div>
-            <Login />
-        </div>
-    )
-}
+  return (
+    <div>
+      <Login />
+    </div>
+  );
+};
 export default Logout;

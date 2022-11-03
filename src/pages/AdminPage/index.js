@@ -56,7 +56,7 @@ const { Option } = Select;
 const AdminPage = (props) => {
   // Map State to Props
   const { listContent, isLoading } = props;
-
+  const navigate = useNavigate();
   const {
     zingNewContent,
     createNewContent,
@@ -66,7 +66,6 @@ const AdminPage = (props) => {
   } = props; //dispatch
 
   // Lấy thông tin user ( key value) từ Local Storage
-  const user = JSON.parse(localStorage.getItem("user"));
 
   // Toggle Sider
   const [collapsed, setcollapsed] = useState(false);
@@ -185,7 +184,14 @@ const AdminPage = (props) => {
   const handleChange = () => {};
   // Get list news
   useEffect(() => {
-    zingNewContent();
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (!user) {
+      window.localStorage.removeItem("user");
+      navigate("/login");
+    } else {
+      navigate("/");
+      zingNewContent();
+    }
   }, []);
 
   // OPEN Modal
@@ -348,7 +354,7 @@ const AdminPage = (props) => {
                   <RedditOutlined style={{ color: "blue" }} />
                 </label>
               </Dropdown>
-              <label className="username">Xin chào {user?.username}</label>
+              <label className="username">Xin chào </label>
             </div>
           </Header>
 
