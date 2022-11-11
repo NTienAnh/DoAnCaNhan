@@ -184,14 +184,7 @@ const AdminPage = (props) => {
   const handleChange = () => {};
   // Get list news
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem("user"));
-    if (!user) {
-      window.localStorage.removeItem("user");
-      navigate("/login");
-    } else {
-      navigate("/");
-      zingNewContent();
-    }
+    zingNewContent();
   }, []);
 
   // OPEN Modal
